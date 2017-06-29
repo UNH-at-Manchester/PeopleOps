@@ -1,0 +1,7 @@
+digraph G {
+n1 [label="{User|- inviteToChannel() : Invite User to Slack Channel\l|- message() : send a message to User\l|+ name[] : Username(s)\l|+ message : The Message to Send a User\l}" style=filled fillcolor="#ffffff" shape="record"];
+n2 [label="{Channel|- create() : Create Slack Channel\l|- message() : send a message to Slack Channel\l|- setStatus() : Set the Status of a Channel\l|+ name : Channel Name\l|+ password : Channel Password\l|+ message : The Message to Send to Slack Channel\l}" style=filled fillcolor="#ffffff" shape="record"];
+n3 [label="{Email|- verify() : Verify Slack Channel Sign Up Email\l|- send() : Send e-mail to User\l}" style=filled fillcolor="#ffffff" shape="record"];
+n1 -> n2 [arrowhead="none"];
+n3 -> n2 [arrowhead="none"];
+}
