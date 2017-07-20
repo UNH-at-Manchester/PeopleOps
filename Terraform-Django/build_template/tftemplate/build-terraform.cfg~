@@ -1,0 +1,5 @@
+[Config]
+root_path = /home/gayathri/Desktop/Terraform-Django
+path_to_terraform = /usr/local/bin/terraform
+terraform_mode = apply
+version = 2.1
