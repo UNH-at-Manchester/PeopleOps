@@ -1,0 +1,72 @@
+<html>
+<!--not uesd currently
+	<style>
+	</style>
+-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script language="JavaScript">
+	
+	function createChannel()		
+	{
+		console.log('begin');
+        var http = new XMLHttpRequest();
+		
+		var rad = document.testButton.private.value;
+		var channelName = document.testButton.channelName.value;
+		var params = "";
+		if(rad == "Public")
+		{
+			params = "public=true";
+		}
+		else
+		{
+			params = "public=false";
+		}
+		
+        http.open("POST", "http://localhost:1337/createChannel", true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //http.setRequestHeader("Content-length", params.length);
+        //http.setRequestHeader("Connection", "close");
+
+        http.onreadystatechange = function() 
+		{
+            console.log('onreadystatechange');
+            if (http.readyState == 4 && http.status == 200) 
+			{
+                alert(http.responseText);
+            }
+            else 
+			{
+                alert('readyState=' + http.readyState + ', status: ' + http.status);
+            }
+        }
+
+        console.log('sending...')
+        http.send(params);
+        console.log('end');		
+	}
+	
+	function getChannels()
+	{
+		
+		
+		//$('#t').val(allVals);
+	}
+	
+	</script>
+	<form name="testButton">
+		<input type="button" value="create channel" onclick="createChannel();">
+		<input type="radio" name="private" checked="checked" value="Public"> Public
+		<input type="radio" name="private" value="Private"> Private
+		<br>
+		<input type="text" name="channelName" value="">
+		<br><br><br>
+		
+		<div id="cb">
+			<input type="button" value="get channels" onclick="getChannels();">
+			<input type="checkbox" name="channelType" value="Public"> Public
+			<input type="checkbox" name="channelType" value="Private"> Private
+		</div>
+		<textarea id="t"></textarea>
+	</form>
+</html>

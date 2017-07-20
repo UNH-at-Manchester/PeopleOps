@@ -1,0 +1,13 @@
+{
+  "name": "devops",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "author": "Cody Roberge",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.x.x",
+    "express": "^4.15.3",
+    "request": "2.56.x"
+  }
+}
