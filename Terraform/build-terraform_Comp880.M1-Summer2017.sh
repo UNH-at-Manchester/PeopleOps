@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/timothychadwick/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/cmr1048/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/dfa1000/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/lpthompson/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/gp1047/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/prr22/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/sa1119/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/tci24/
+echo $PWD
+/bin/terraform apply
+cd /home/patrick/Downloads/build-terraform/Comp880.M1-Summer2017/hjy1000/
+echo $PWD
+/bin/terraform apply
