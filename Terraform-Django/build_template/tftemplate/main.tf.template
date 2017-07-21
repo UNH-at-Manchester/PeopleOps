@@ -1,6 +1,6 @@
 provider "aws" {
-  access_key = "AKIAJ2WDHQWIHCCOW25Q"
-  secret_key = "GbODFfJKwZRW6Pm1NAuR9pavwvxBYNWviIODyofc"
+  access_key = REDACTED
+  secret_key = REDACTED
   region = "us-east-2"
 }
 resource "aws_instance" "{% username %}-unhm" {
@@ -13,7 +13,7 @@ resource "aws_instance" "{% username %}-unhm" {
   user_data                   = "${file("setup-env.sh")}"
 
   availability_zone           = "us-east-2a"
-  key_name                    = "gayathri"
+  key_name                    = "{% username %}"
 
   root_block_device {
     volume_type               = "gp2"
